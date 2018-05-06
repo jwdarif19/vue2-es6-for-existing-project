@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+
+    <select v-model="select">
+      <option value="" selected>select</option>
+      <option value="hide">hide</option>
+      <option value="show">show</option>
+    </select>
+    <input type="text" v-if="select=='show'" v-mask="'####-##'" v-mask="'99/99/9999'">
+  </div>
+
+  <script src="dist/app.js"></script>
+</body>
+</html>
